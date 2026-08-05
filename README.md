@@ -58,6 +58,7 @@ python main.py
 Use this section to log personal breakthroughs or notes as you advance.
 
 <!-- LOG_ANCHOR -->
+*   **Day 9 Note:** Currently working on Dictionaries, Nested Lists, and initializing the Blind Auction Project.
 *   **Day 8 Note:** Mastered the difference between positional and keyword arguments.
 *   **Day 7 Note:** Developed a text-based Hangman game, learning how to handle user lives, ASCII art states, and visual feedback string manipulation.
 *   **Day 6 Note:** Mastered `while` loops, function definitions, and code blocks using the Reeborg's World pathfinding maze challenges.
