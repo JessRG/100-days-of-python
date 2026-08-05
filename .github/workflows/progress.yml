@@ -1,0 +1,37 @@
+name: Auto Update Progress Tracker
+
+on:
+  push:
+    branches:
+      - main  # Change to master if your default branch is named master
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    # Prevent infinite loops by skipping commits made by this automation script
+    if: "!contains(github.event.head_commit.message, 'Auto-update progress')"
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Tracker Update Script
+        env:
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: python update_progress.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@://github.com"
+          git diff --quiet || (git add README.md && git commit -m "docs: Auto-update progress tracker [skip ci]" && git push)

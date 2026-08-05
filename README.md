@@ -57,5 +57,12 @@ python main.py
 
 Use this section to log personal breakthroughs or notes as you advance.
 
+<!-- LOG_ANCHOR -->
 *   **Day 8 Note:** Mastered the difference between positional and keyword arguments.
-*   **Day 9 Note:** Currently working on Dictionaries, Nested Lists, and initializing the Blind Auction Project.
+*   **Day 7 Note:** Developed a text-based Hangman game, learning how to handle user lives, ASCII art states, and visual feedback string manipulation.
+*   **Day 6 Note:** Mastered `while` loops, function definitions, and code blocks using the Reeborg's World pathfinding maze challenges.
+*   **Day 5 Note:** Practiced the `for` loop, `range()` functions, and password generation logic by creating a secure PyPassword Generator.
+*   **Day 4 Note:** Handled random module generation (`random.randint`, `random.choice`) and list indexing states to build a Rock, Paper, Scissors game.
+*   **Day 3 Note:** Worked deep into conditional statements (`if`/`elif`/`else`), logical operators, and modulo logic to construct a Choose Your Own Adventure Treasure Island text game.
+*   **Day 2 Note:** Mastered primitive data types, type casting, f-strings, and mathematical operations by engineering a functional Tip Calculator.
+*   **Day 1 Note:** Learned basic printing, string manipulation, input functions, and variable storage mechanics by writing a Band Name Generator program.
