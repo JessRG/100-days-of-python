@@ -27,6 +27,10 @@ operations = {
 result = 0
 continue_with_result = False
 while True:
+    choice = input("Would you like to use the calculator?: ").lower()
+    if choice in ("n", "no"):
+        break
+
     print(logo)
 
     if not continue_with_result:
