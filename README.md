@@ -7,6 +7,7 @@ This repository contains my progress, daily challenges, and completed solutions 
 
 ## 📊 Progress Tracker
 
+<!-- START_PROGRESS_TRACKER -->
 | Section | Target Days | Focus | Status |
 | :--- | :---: | :--- | :---: |
 | **Phase 1** | Days 1–15 | Python Fundamentals & Basics | 🟡 Days 1–8 Complete / Day 9 In Progress |
@@ -14,7 +15,7 @@ This repository contains my progress, daily challenges, and completed solutions 
 | **Phase 3** | Days 33–58 | Web Development, APIs, & Scraping | ⚪ Not Started |
 | **Phase 4** | Days 59–80 | Data Science & Advanced Automation | ⚪ Not Started |
 | **Phase 5** | Days 81–100 | Advanced Capstone Projects | ⚪ Not Started |
-
+<!-- END_PROGRESS_TRACKER -->
 ---
 
 ## 🗂️ Project Structure
