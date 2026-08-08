@@ -8,9 +8,10 @@ This repository contains my progress, daily challenges, and completed solutions 
 ## 📊 Progress Tracker
 
 <!-- START_PROGRESS_TRACKER -->
+
 | Section | Target Days | Focus | Status |
 | :--- | :---: | :--- | :---: |
-| **Phase 1** | Days 1–15 | Python Fundamentals & Basics | 🟡 Days 1–8 Complete / Day 9 In Progress |
+| **Phase 1** | Days 1–15 | Python Fundamentals & Basics | 🟡 Days 1-10 Complete / Day 11 In Progress |
 | **Phase 2** | Days 16–32 | Intermediate Python & OOP | ⚪ Not Started |
 | **Phase 3** | Days 33–58 | Web Development, APIs, & Scraping | ⚪ Not Started |
 | **Phase 4** | Days 59–80 | Data Science & Advanced Automation | ⚪ Not Started |
@@ -59,6 +60,7 @@ python main.py
 Use this section to log personal breakthroughs or notes as you advance.
 
 <!-- LOG_ANCHOR -->
+*   **Day 11 Note:** Completed exercises and project tasks.
 *   **Day 9 Note:** Currently working on Dictionaries, Nested Lists, and initializing the Blind Auction Project.
 *   **Day 8 Note:** Mastered the difference between positional and keyword arguments.
 *   **Day 7 Note:** Developed a text-based Hangman game, learning how to handle user lives, ASCII art states, and visual feedback string manipulation.
