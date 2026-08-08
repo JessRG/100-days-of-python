@@ -2,7 +2,6 @@ from art import logo
 import time
 import random
 
-cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 blackjack = 21
 
 def calculate_score(player_hand):
@@ -13,14 +12,15 @@ def calculate_score(player_hand):
     return sum(player_hand)
 
 def draw_card(player_hand):
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     player_hand.append(random.choice(cards))
 
 def display_results(player_hand, opponent_hand):
-    print(f"Your final hand: {player_hand}, final score: {calculate_score(player_hand)}")
-    print(f"Computer's final hand: {opponent_hand}, final score: {calculate_score(opponent_hand)}")
-
     player_score = calculate_score(player_hand)
     opponent_score = calculate_score(opponent_hand)
+
+    print(f"Your final hand: {player_hand}, final score: {player_score}")
+    print(f"Computer's final hand: {opponent_hand}, final score: {opponent_score}")
 
     if player_score > blackjack:
         print("You went over. You lose 😭")
@@ -45,42 +45,37 @@ def display_interface():
     print(logo)
 
 def play_blackjack():
-    while True:
-        user_input = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
-        if user_input not in ("y", "yes"):
-            break
+    player_cards = []
+    computer_cards = []
 
-        display_interface()
+    # Deal 2 cards to each player
+    for i in range(2):
+        draw_card(player_cards)
+        draw_card(computer_cards)
 
-        player_cards = []
-        computer_cards = []
+    hit = True
+    while hit:
+        player_score = calculate_score(player_cards)
+        print(f"Your cards: {player_cards}, current score: {player_score}")
+        print(f"Computer's first card: {computer_cards[0]}")
 
-        # Deal 2 cards to each player
-        for i in range(2):
-            player_cards.append(random.choice(cards))
-            computer_cards.append(random.choice(cards))
+        if player_score > blackjack:
+            display_results(player_cards, computer_cards)
+            hit = False
+        else:
+            hit = input("Type 'y' to get another card, type 'n' to pass: ").lower() in ("y", "yes")
 
-        hit_or_pass = True
-        while hit_or_pass:
-            print(f"Your cards: {player_cards}, current score: {calculate_score(player_cards)}")
-            print(f"Computer's first card: {computer_cards[0]}")
+            if hit:
+                draw_card(player_cards)
 
-            if calculate_score(player_cards) > blackjack:
-                display_results(player_cards, computer_cards)
-                hit_or_pass = False
-            else:
-                hit_or_pass = input("Type 'y' to get another card, type 'n' to pass: ").lower() in ("y", "yes")
+    opponent_score = calculate_score(computer_cards)
+    while opponent_score != blackjack and opponent_score < 17:
+        time.sleep(1.0)  # Adds suspense in terminal
+        draw_card(computer_cards)
+        opponent_score = calculate_score(computer_cards)
 
-                if hit_or_pass:
-                    draw_card(player_cards)
-                else:
-                    time.sleep(1.0)  # Adds suspense (computer takes time to decide)
+    display_results(opponent_hand=computer_cards, player_hand=player_cards)
 
-                    while calculate_score(computer_cards) < 17:
-                        draw_card(computer_cards)
-                        time.sleep(1.0)  # Adds suspense in terminal
-
-                    display_results(opponent_hand=computer_cards, player_hand=player_cards)
-
-
-play_blackjack()
+while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower() in ("y", "yes"):
+    display_interface()
+    play_blackjack()
