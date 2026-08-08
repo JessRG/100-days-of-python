@@ -5,22 +5,22 @@ import random
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 blackjack = 21
 
-def add_cards(player_hand):
-    score = 0
-    for card in player_hand:
-        score += card
+def calculate_score(player_hand):
+    if 11 in player_hand and sum(player_hand) > blackjack:
+        player_hand.remove(11)
+        player_hand.append(1)
 
-    return score
+    return sum(player_hand)
 
 def draw_card(player_hand):
     player_hand.append(random.choice(cards))
 
 def display_results(player_hand, opponent_hand):
-    print(f"Your final hand: {player_hand}, final score: {add_cards(player_hand)}")
-    print(f"Computer's final hand: {opponent_hand}, final score: {add_cards(opponent_hand)}")
+    print(f"Your final hand: {player_hand}, final score: {calculate_score(player_hand)}")
+    print(f"Computer's final hand: {opponent_hand}, final score: {calculate_score(opponent_hand)}")
 
-    player_score = add_cards(player_hand)
-    opponent_score = add_cards(opponent_hand)
+    player_score = calculate_score(player_hand)
+    opponent_score = calculate_score(opponent_hand)
 
     if player_score > blackjack:
         print("You went over. You lose 😭")
@@ -62,10 +62,10 @@ def play_blackjack():
 
         hit_or_pass = True
         while hit_or_pass:
-            print(f"Your cards: {player_cards}, current score: {add_cards(player_cards)}")
+            print(f"Your cards: {player_cards}, current score: {calculate_score(player_cards)}")
             print(f"Computer's first card: {computer_cards[0]}")
 
-            if add_cards(player_cards) > blackjack:
+            if calculate_score(player_cards) > blackjack:
                 display_results(player_cards, computer_cards)
                 hit_or_pass = False
             else:
@@ -76,7 +76,7 @@ def play_blackjack():
                 else:
                     time.sleep(1.0)  # Adds suspense (computer takes time to decide)
 
-                    while add_cards(computer_cards) < 17:
+                    while calculate_score(computer_cards) < 17:
                         draw_card(computer_cards)
                         time.sleep(1.0)  # Adds suspense in terminal
 
