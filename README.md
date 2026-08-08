@@ -61,6 +61,8 @@ Use this section to log personal breakthroughs or notes as you advance.
 
 <!-- LOG_ANCHOR -->
 *   **Day 11 Note:** Completed exercises and project tasks.
+*   **Day 10 Note:** Build calculator project with functions and dictionaries
+*   **Day 09 Note:** Complete Python dictionaries, nesting, and secret auction program.
 *   **Day 9 Note:** Currently working on Dictionaries, Nested Lists, and initializing the Blind Auction Project.
 *   **Day 8 Note:** Mastered the difference between positional and keyword arguments.
 *   **Day 7 Note:** Developed a text-based Hangman game, learning how to handle user lives, ASCII art states, and visual feedback string manipulation.
