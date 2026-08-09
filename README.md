@@ -60,6 +60,7 @@ python main.py
 Use this section to log personal breakthroughs or notes as you advance.
 
 <!-- LOG_ANCHOR -->
+*   **Day 13 Note:** Completed Debugging section exercises and project tasks.
 *   **Day 12 Note:** Completed exercises and project tasks.
 *   **Day 11 Note:** Completed exercises and project tasks.
 *   **Day 10 Note:** Build calculator project with functions and dictionaries
