@@ -40,7 +40,6 @@ def get_subject(game_pool):
 def play_game():
     """Play the game against user's current score."""
     user_score = 0
-
     # Make a fresh copy for this specific game session
     game_pool = data.copy()
     # Get initial subject A to compare
@@ -57,8 +56,17 @@ def play_game():
         user_choice = input("Who has more followers? Type 'A' or 'B' ").lower()
         print("\n" * 20)
 
-        if user_choice in ('A', 'B', 'a', 'b'):
+        if user_choice in 'a':
             result = compare_followers((subject_a["follower_count"], subject_b["follower_count"]))
+
+            if result >= 0:
+                user_score += 1
+                subject_a = subject_b
+            else:
+                game_over = True
+                show_failure(user_score)
+        elif user_choice in 'b':
+            result = compare_followers((subject_b["follower_count"], subject_a["follower_count"]))
 
             if result >= 0:
                 user_score += 1
