@@ -1,3 +1,4 @@
+# Completed this project in separate repository
 MENU = {
     "espresso": {
         "ingredients": {
