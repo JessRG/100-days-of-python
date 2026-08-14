@@ -11,8 +11,8 @@ This repository contains my progress, daily challenges, and completed solutions 
 
 | Section | Target Days | Focus | Status |
 | :--- | :---: | :--- | :---: |
-| **Phase 1** | Days 1–15 | Python Fundamentals & Basics | 🟡 Days 1-14 Complete / Day 15 In Progress |
-| **Phase 2** | Days 16–32 | Intermediate Python & OOP | ⚪ Not Started |
+| **Phase 1** | Days 1–15 | Python Fundamentals & Basics | 🟢 Days 1–15 Complete |
+| **Phase 2** | Days 16–32 | Intermediate Python & OOP | 🟡 Day 16 In Progress |
 | **Phase 3** | Days 33–58 | Web Development, APIs, & Scraping | ⚪ Not Started |
 | **Phase 4** | Days 59–80 | Data Science & Advanced Automation | ⚪ Not Started |
 | **Phase 5** | Days 81–100 | Advanced Capstone Projects | ⚪ Not Started |
@@ -60,6 +60,7 @@ python main.py
 Use this section to log personal breakthroughs or notes as you advance.
 
 <!-- LOG_ANCHOR -->
+*   **Day 16 Note:** Completed exercises and project tasks.
 *   **Day 15 Note:** Completed exercises and project tasks.
 *   **Day 14 Note:** Completed exercises and project tasks.
 *   **Day 13 Note:** Completed Debugging section exercises and project tasks.
