@@ -2,3 +2,5 @@
 # Instead of using templates that I have created for you.
 # It will be another step in your journey as a developer!
 # But don't worry, I will explain how to do everything in the video tutorials on Udemy.
+
+# Completed Day 16 OOP Coffee Machine project in separate repository.
