@@ -5,3 +5,4 @@
 
 # Completed Day 16 OOP Coffee Machine project in separate repository.
 # Day 17 Quiz Game project currently in progress.
+# Day 17 Quiz Game project complete in separate repository
